@@ -1,0 +1,48 @@
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+.displyAdjst{
+	position: relative;
+	top:40%;
+	transform:translateY(-40%);
+}
+
+button {
+	background-color: #007DDB;
+	border: none;
+	color: white;
+	font-family: "宋体";
+	font-weight: 700;
+	font-size: 17px;
+}
+
+#container {
+	width: 1200px;
+	height: 600px;
+	position: absolute;
+	left: 50%;
+	margin-left: -600px;
+	margin-top: 20px;
+}
+
+#upldArea {
+	width: 1200px;
+	height: 400px;
+	background-color: #F0F0F0;
+	vertical-align: middle;
+}
+
+#reminder {
+	color: #777777;
+	text-align: center;
+}
+
+#sub, #tst {
+	width: 120px;
+	height: 35px;
+	margin-top: 20px;
+}

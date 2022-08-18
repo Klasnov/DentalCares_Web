@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>龋齿检测系统</title>
+		<style type="text/css">
+			body {
+				background: url(img/bg.jpg) fixed;
+				background-size: cover;
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				overflow: hidden;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/result.css"/>
+	</head>
+	<body>
+		<img src="img/badge.png" width="270px" style="margin-left: 20px; margin-top: 10px;"><br>
+		<p align="center"><font size="6.5" face="仿宋" color="#F9F9F9">检测结果</font></p>
+		
+		<!-- 功能区 -->
+		<div id="container" align="center">
+			<!-- 展示区 -->
+			<div id="result" align="center">
+				<!-- 显示绿勾，提示用户当前牙齿状况很健康 -->
+				<div id="infrom" >
+					<img src="img/pos.jpg" width="380px" >
+					<p><font size="4" face="宋体" style="margin-left: 15px;"><b>您的牙齿状况很健康！</b></font></p>
+				</div>
+				<!-- 牙齿健康小科普 -->
+				<div id="txt">
+					<p class="displyTitle">
+						<font size="4" face="宋体"><b>护牙小贴士</b></font>
+						<br><br><br>
+						<font face="宋体" class="Scince">
+							如果牙刷是湿的，挤上牙膏后很容易起泡沫。
+							嘴里有了丰富的泡沫，就容易产生刷了很长时间的错觉。
+							其实上，雅琪还没有真正被刷干净。
+							</font>
+						<br><br>
+						<font face="宋体" class="Scince">
+							坚持刷牙也可能有牙结石，最好每年一次到正规意愿做口腔检查，去除牙结石。
+							如果不即使除去牙结石，牙龈会萎缩，牙周病会进一步发展，最终导致牙齿脱落。
+						</font>
+						<br><br>
+						<font face="宋体" class="Scince">
+							饮料中的酸性物质会软化牙釉质，使牙釉质产生脱矿作用。
+							喝完碳酸饮料后最好用清水漱口，半小时后再刷牙。
+						</font>
+					</p>
+				</div>
+			</div>
+			
+			<!-- 按键区 -->
+			<div align="center">
+				<form action="" method="post">
+					<button type="button" id="tst" style="margin-left: 50px;" onclick="toSngl()">重新检测</button>
+				</form>
+			</div>
+		</div>	
+	</body>
+	
+	<!-- 页面跳转控制 -->
+	<script type="text/javascript" src="js/upload.js" charset="UTF-8"></script>
+</html>

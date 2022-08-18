@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>龋齿检测系统</title>
+		<style type="text/css">
+			body {
+				background: url(img/bg_blured.jpg) fixed;
+				background-size: cover;
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				overflow: hidden;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/upload.css"/>
+	</head>
+	
+	<body>
+		<img src="img/badge.png" width="270px" style="margin-left: 20px; margin-top: 10px;"><br>
+		<p align="center"><font size="6.5" face="仿宋" color="#F9F9F9">欢迎使用龋齿检测系统</font></p>
+		
+		<table align="center" width="1200px" height="40px" bgcolor="#007DDB" style="color: white; margin-top: 20px;">
+			<tr>
+				<th><button class="tabtitl" type="button" onclick="window.location.reload()">单张检测</button></th>
+				<th><button class="tabtitl" type="button" onclick="toMulti()">多张检测</button></th>
+				<th><button class="tabtitl" type="button" onclick="toZip()">压缩包检测</button></th>
+			</tr>
+		</table>
+		
+		<div id="container" align="center">		
+			<div id="upldArea" align="center">
+				<p id="reminder" class="displyAdjst">
+					<b>注意事项：</b><br><br>
+					请保证图像光线充足。<br><br>
+					每张图像请正对牙齿咬合面。<br><br>
+					棉签等物体请不要与牙接触。<br><br>
+					请不要遮挡牙齿。
+				</p>
+			</div>
+			<div align="center">
+				<form action="" method="post" enctype="multipart/form-data">
+					<input type="file" id="imgFile" hidden="hidden" />
+					<button type="button" id="sub">上传图片</button>
+					<button type="button" id="tst" style="margin-left: 50px;" onclick="toPosResult()">进行检测</button>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+	
+	<script type="text/javascript" src="js/upload.js" charset="UTF-8"></script>
+	<script type="text/javascript">
+		var inputImg = document.getElementById('imgFile');
+		var subBtn = document.getElementById('sub');
+		var ldimg = document.createElement("img");
+		subBtn.onclick = function() {
+			inputImg.click();
+		}
+		inputImg.onchange = function() {
+			ldimg.src = window.URL.createObjectURL(inputImg.files[0]);
+			ldimg.height = 370;
+			ldimg.style = "position: relative; top:50%;	transform:translateY(-50%);";
+			var upldArea = document.getElementById("upldArea");
+			var remider = document.getElementById('reminder');
+			upldArea.removeChild(remider);
+			upldArea.appendChild(ldimg);
+		}
+
+	</script>
+
+</html>

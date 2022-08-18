@@ -1,0 +1,62 @@
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+
+button {
+	background-color: #007DDB;
+	border: none;
+	color: white;
+	font-family: "宋体";
+	font-weight: 700;
+	font-size: 17px;
+}
+
+.displyTitle{
+	position: relative;
+	top:25%;
+	transform:translateY(-25%);
+}
+
+.Scince {
+	display: inline-block;
+	width: 430px;
+	text-align: justify;
+	text-indent: 2em;
+}
+
+#container {
+	width: 1200px;
+	height: 600px;
+	position: absolute;
+	left: 50%;
+	margin-left: -600px;
+	margin-top: 10px;
+}
+
+#result {
+	width: 1000px;
+	height: 450px;
+	background-color: #FFFFFF;
+	vertical-align: middle;
+}
+
+#infrom {
+	float: left;
+	width: 420px;
+	height: 450px;
+}
+
+#txt {
+	float: right;
+	width: 580px;
+	height: 450px;
+}
+
+#tst {
+	width: 120px;
+	height: 35px;
+	margin-top: 20px;
+}
